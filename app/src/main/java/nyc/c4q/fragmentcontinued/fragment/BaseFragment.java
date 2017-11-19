@@ -57,7 +57,20 @@ public class BaseFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
-
+        buttonTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment2 Fragment2 = new Fragment2();
+                FragmentManager fragmentManager= getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
+                String editTextContents= editText.getText().toString();
+                Bundle bundle= new Bundle();
+                bundle.putString("fragmentTwo", editTextContents);
+                Fragment2.setArguments(bundle);
+                fragmentTransaction.replace(R.id.main_container, Fragment2).addToBackStack("fragmentTwo");
+                fragmentTransaction.commit();
+            }
+        });
         return rootView;
 
         }
