@@ -30,7 +30,7 @@ public class Fragment1 extends Fragment {
         TextView textView = rootView.findViewById(R.id.text1);
 
         Bundle bundle = getArguments();
-        String textFromEditText= bundle.getString("FragmentOne");
+        String textFromEditText= bundle.getString("fragmentOne");
         textView.setText(textFromEditText);
 
         return rootView;

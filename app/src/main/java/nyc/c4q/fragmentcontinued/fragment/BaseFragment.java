@@ -51,9 +51,9 @@ public class BaseFragment extends Fragment {
                 FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
                 String editTextContents = editText.getText().toString();
                 Bundle bundle = new Bundle();
-                bundle.putString("FragmentOne", editTextContents);
+                bundle.putString("fragmentOne", editTextContents);
                 Fragment1.setArguments(bundle);
-                fragmentTransaction.replace(R.id.main_container, Fragment1).addToBackStack("FragmentOne");
+                fragmentTransaction.replace(R.id.main_container, Fragment1).addToBackStack("fragmentOne");
                 fragmentTransaction.commit();
             }
         });
