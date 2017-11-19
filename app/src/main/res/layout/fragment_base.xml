@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context="nyc.c4q.fragmentcontinued.BaseFragment">
+    tools:context="nyc.c4q.fragmentcontinued.fragment.BaseFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <EditText
