@@ -87,6 +87,21 @@ public class BaseFragment extends Fragment {
             }
         });
 
+        buttonFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment4 Fragment4 = new Fragment4();
+                FragmentManager fragmentManager= getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
+                String editTextContents= editText.getText().toString();
+                Bundle bundle= new Bundle();
+                bundle.putString("fragmentFour", editTextContents);
+                Fragment4.setArguments(bundle);
+                fragmentTransaction.replace(R.id.main_container, Fragment4).addToBackStack("fragmentFour");
+                fragmentTransaction.commit();
+            }
+        });
+
         return rootView;
 
         }
